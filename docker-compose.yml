@@ -1,0 +1,15 @@
+# PostgreSQL for integration and the demo (design §3.1). Start with: docker compose up -d
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: cryptix
+      POSTGRES_PASSWORD: cryptix
+      POSTGRES_DB: cryptix
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

@@ -1,0 +1,29 @@
+# GitHub requests a review from the owner of every file a pull request touches.
+# Later lines win. Replace the two placeholders with real GitHub usernames, and
+# check the M1 and M2 usernames, before turning on "Require review from Code Owners".
+#
+# M1 Dewdunika D.R.K.W.M.V.V   @vidushiDew
+# M2 Jayasinghe E.A.T.D        @thisuri-jay
+# M3 Madhubhashini M.D.D.      @DeepthiDevindi
+# M4 Samarakoon S.M.S.G.       @M4-GITHUB-USERNAME
+# M5 Wansandi M.G.J.           @M5-GITHUB-USERNAME
+
+# Shared contract files: anyone in the group can approve, but tell everyone first (CONTRIBUTING.md §2)
+*                                   @vidushiDew @thisuri-jay @DeepthiDevindi @M4-GITHUB-USERNAME @M5-GITHUB-USERNAME
+
+/backend/app/accounts/              @vidushiDew
+/backend/app/core/crypto.py         @vidushiDew
+/backend/tests/test_m1_accounts.py  @vidushiDew
+
+/backend/app/otp/                   @thisuri-jay
+/backend/tests/test_m2_otp.py       @thisuri-jay
+
+/backend/app/passkeys/              @DeepthiDevindi
+/backend/tests/test_m3_passkeys.py  @DeepthiDevindi
+
+/frontend/                          @M4-GITHUB-USERNAME
+/frontend/js/webauthn.js            @DeepthiDevindi
+
+/backend/app/orchestrator/          @M5-GITHUB-USERNAME
+/backend/tests/test_m5_orchestrator.py @M5-GITHUB-USERNAME
+/backend/tests/security/            @M5-GITHUB-USERNAME

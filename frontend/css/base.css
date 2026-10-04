@@ -1,0 +1,43 @@
+/* Base styles for every screen.  Owner: M4
+   TODO M4: large text (200 %), reflow at 400 %, high-contrast and dark themes (§7.4, AR-8). */
+
+:root {
+  --text: #111;
+  --background: #fff;
+  --focus: #0b57d0;
+}
+
+body {
+  margin: 0;
+  font: 1.125rem/1.6 system-ui, sans-serif;
+  color: var(--text);
+  background: var(--background);
+}
+
+main {
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* The focused control is always visibly outlined (§7.2). */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Every button large enough for a finger or an unsteady pointer (AR-8). */
+button,
+input {
+  min-height: 44px;
+  font: inherit;
+}
